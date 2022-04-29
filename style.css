@@ -79,3 +79,10 @@ body{
     height: 40px;
     margin-top: 5px;
 }
+.container .links-social .link svg{
+    background-color: none;
+    color: #60ccf0;
+    fill: #60ccf0;
+    width: 40px;
+    height: 40px;
+}
