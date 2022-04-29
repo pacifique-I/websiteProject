@@ -3,8 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'raleway';
-    font-size: 25px;
-    font-weight: 200;
+    font-size: 20px;
+    font-weight: 300;
+    color: #ffffff;
 }
 body{
     width: 100vw;
@@ -15,4 +16,45 @@ body{
     width: 100%;
     height: 100%;
     background-color: #1d4a61;
+}
+.container .navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1d4a61;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.container .navbar .links span{
+    margin-left: 15px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #60ccf0;
+    font-size: 18px;
+}
+.container .navbar .links .contact{
+    background-color: #60ccf0;
+    color: #0b1d25;
+    font-weight: 400;
+    font-size: 18px;
+}
+.container .navbar .links .youtube{
+    background-color: #e64747;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 100px;
+}
+.container .navbar .links span:hover{
+    cursor: pointer;
+    border: 1.5px solid #60ccf0;
+}
+.container .navbar .links .contact:hover{
+    border: none;
+}
+.container .navbar .links .youtube:hover{
+    border: none;
 }
