@@ -391,3 +391,124 @@ body{
     cursor: pointer;
 }
 
+/* STYLING ABOUT PAGE */
+.container .page-container .about{
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 200%;
+    margin-top: 20px;
+}
+.container .page-container .about .back-word{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.container .page-container .about .back-word img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .1;
+}
+.container .page-container .about .content{
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container .page-container .about .content .card{
+    height: 60%;
+    width: 20%;
+    margin: 5px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.384);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+.container .page-container .about .content .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    filter: blur(5px);
+    z-index: 1;
+    transition: all ease-in-out .4s;
+}
+.container .page-container .about .content .card:hover{
+    cursor: pointer;
+}
+
+.container .page-container .about .content .card:hover img{
+    opacity: .1;
+    transition: .2s;
+}
+.container .page-container .about .content .card .title{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all ease-in-out .3s;
+}
+.container .page-container .about .content .card .title span{
+    font-family: 'Riffic Free Medium';
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+.container .page-container .about .content .card:hover .title{
+    top: 35px;
+    transition: .2s;
+}
+.container .page-container .about .content .card .info{
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all ease-in-out .4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    opacity: 0;
+}
+.container .page-container .about .content .card .info p{
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+}
+.container .page-container .about .content .card:hover .info{
+    height: 100%;
+    opacity: .9;
+    transition: .2s;
+}
+.container .page-container .about .content .card ul li{
+    list-style: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+}
