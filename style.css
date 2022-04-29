@@ -270,7 +270,7 @@ body{
 
 /* STYLING PROJECTS PAGE */
 .container .page-container .projects{
-    padding: 10%;
+    padding: 5%;
     width: 100%;
     height: 100%;
     background: none;
@@ -281,6 +281,7 @@ body{
     position: absolute;
     top: 0;
     left: 100%;
+    margin-top: 20px;
 }
 .container .page-container .projects .back-word{
     z-index: 1;
@@ -309,18 +310,21 @@ body{
     font-weight: 600;
     color: #ffffff;
     opacity: .7;
+    margin: 10px 10px 50px 10px;
 }
 .container .page-container .projects .content .projects-container{
     display: grid;
     grid-template-columns:  1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0px;
-    margin: 20px 50px;
+    gap: 10px;
+    width: 90%;
+    margin: 5px auto;
 }
 .container .page-container .projects .content .projects-container .project{
     width: 100%;
-    height: 200px;
+    height: 180px;
     position: relative;
+    overflow: hidden;
     
 }
 .container .page-container .projects .content .projects-container .project img{
@@ -328,6 +332,8 @@ body{
     width: 100%;
     height: 100%;
     object-fit:cover;
+    transform: scale(1.2);
+    transition: all ease-in-out .4s;
 }
 .container .page-container .projects .content .projects-container .project .description{
     position: absolute;
@@ -356,6 +362,10 @@ body{
 }
 .container .page-container .projects .content .projects-container .project:hover{
     cursor: pointer;
+}
+.container .page-container .projects .content .projects-container .project:hover img{
+    transform: scale(1);
+    transition: .2;
 }
 .container .page-container .projects .content .projects-container .project:hover .description{
     height: 100%;
