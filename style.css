@@ -1,3 +1,4 @@
+/* ALL ELEMENTS STYLING */
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +8,8 @@
     font-weight: 300;
     color: #ffffff;
 }
+
+/* BODY STYLING SECTION */
 body{
     width: 100vw;
     height: 100vh;
@@ -17,6 +20,8 @@ body{
     height: 100%;
     background-color: #1d4a61;
 }
+
+/* NAVBAR ELEMENTS STYLING */
 .container .navbar{
     position: absolute;
     top: 0;
@@ -57,4 +62,20 @@ body{
 }
 .container .navbar .links .youtube:hover{
     border: none;
+}
+
+/* STYLING LOGOS SECTION */
+.container .links-social{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-right: 1.5px solid #60ccf0;
+}
+.container .links-social .link{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
 }
