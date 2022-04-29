@@ -61,6 +61,7 @@ body{
     margin-left: 100px;
     padding: 5px 10px;
     font-family: 'Riffic Free Medium';
+    cursor: pointer;
 }
 .container .navbar .links span:hover{
     cursor: pointer;
@@ -160,8 +161,26 @@ body{
 }
 
 
+/* GENERAL PAGE STYLES */
+.container .page-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    height: 100%;
+    position: relative;
+    overflow-y: hidden;
+}
+.container .page-container .page{
+    padding: 10%;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+
+
 /* STYLING THE HOME PAGE  */
-.container .home{
+.container .page-container .home{
     padding: 10%;
     width: 100%;
     height: 100%;
@@ -170,75 +189,195 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.container .home .back-word{
+.container .page-container .home .back-word{
     z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
-.container .home .back-word span{
+.container .page-container .home .back-word span{
     font-family: 'Riffic Free Medium';
-    font-size: 450px;
+    font-size: 400px;
     font-weight: 900;
     color: #0b1d25;
-    opacity: .2;
+    opacity: .1;
     cursor: default;
 }
-.container .home .content{
+.container .page-container .home .content{
     z-index: 2;
 }
-.container .home .content h1{
+.container .page-container .home .content h1{
     text-align: center;
-    font-family: 'consolas';
+    font-family: 'Riffic Free Medium';
     font-size: 30px;
     font-weight: 600;
-    color: #60ccf0;
+    color: #ffffff;
     opacity: .7;
 }
-.container .home .content .paragraphs{
+.container .page-container .home .content .paragraphs{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 15px;
 }
-.container .home .content .paragraphs p{
-    font-family: 'consolas';
-    font-size: 19px;
-    font-weight: 100;
-    color: #60ccf0;
+.container .page-container .home .content .paragraphs p{
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
     opacity: .7;
 }
-.container .home .content .paragraphs .first{
-    border-right: 1.4px solid #60ccf0;
+.container .page-container .home .content .paragraphs .first{
+    border-right: 2.3px solid #ffffff;
     margin-right: 10px;
     padding: 10px 25px;
     text-align: right;
 }
-.container .home .content .paragraphs .second{
+.container .page-container .home .content .paragraphs .second{
     margin-left: 10px;
     padding: 10px;
     text-align: left;
 }
-.container .home .content .links{
+.container .page-container .home .content .links{
     margin: 20px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 40%;
 }
-.container .home .content .links a{
+.container .page-container .home .content .links a{
     border-radius: 4px;
     padding: 10px 20px;
     color: #ffffff;
     font-family: 'Riffic Free Medium';
     font-size: 20px;
     font-weight: 900;
+    letter-spacing: 1.3px;
 }
-.container .home .content .links .fiverr{
+.container .page-container .home .content .links .fiverr{
     background-color: rgb(4, 116, 4);
+    cursor: pointer;
 }
-.container .home .content .links .youtube{
-    background-color: rgb(250, 73, 73);
+.container .page-container .home .content .links .youtube{
+    background-color: rgb(252, 30, 30);
+    cursor: pointer;
 }
+
+
+/* STYLING PROJECTS PAGE */
+.container .page-container .projects{
+    padding: 10%;
+    width: 100%;
+    height: 100%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.container .page-container .projects .back-word{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.container .page-container .projects .back-word span{
+    font-family: 'Riffic Free Medium';
+    font-size: 200px;
+    font-weight: 900;
+    color: #0b1d25;
+    opacity: .1;
+    cursor: default;
+}
+.container .page-container .projects .content{
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+.container .page-container .projects .content h1{
+    text-align: center;
+    font-family: 'Riffic Free Medium';
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    opacity: .7;
+}
+.container .page-container .projects .content .projects-container{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px;
+    margin: 20px 50px;
+}
+.container .page-container .projects .content .projects-container .project{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    
+}
+.container .page-container .projects .content .projects-container .project img{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.container .page-container .projects .content .projects-container .project .description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.911);
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+.container .page-container .projects .content .projects-container .project .description span,a{
+    font-family: 'Riffic Free Medium';
+    font-size: 27px;
+    font-weight: 900;
+    color: #ffffff;
+    opacity: .9;
+    cursor: default;
+    text-align: center;
+}
+.container .page-container .projects .content .projects-container .project:hover{
+    cursor: pointer;
+}
+.container .page-container .projects .content .projects-container .project:hover .description{
+    height: 100%;
+}
+.container .page-container .projects .content .links{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 40%;
+}
+.container .page-container .projects .content .links a{
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-family: 'Riffic Free Medium';
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+}
+.container .page-container .projects .content .links .github{
+    background-color: rgb(15, 15, 15);
+    cursor: pointer;
+}
+
