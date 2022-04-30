@@ -6,7 +6,8 @@ const dotNavigation= document.querySelectorAll(".dot")
 const next= document.querySelector(".next")
 const previous= document.querySelector(".prev")
 const page= document.querySelector(".page-container")
-let index=0 ,pageOffset=1365;
+// 1365
+let index=0 ,pageOffset=window.outerWidth;
 
 contactButton.addEventListener("click",()=>{
     contactPage.style.right="0%";
