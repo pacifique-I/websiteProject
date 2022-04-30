@@ -7,6 +7,7 @@
     font-size: 20px;
     font-weight: 300;
     color: #ffffff;
+    cursor: default;
 }
 a{
     color: #fff;
@@ -23,6 +24,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: #1d4a61;
+    position: relative;
 }
 
 /* NAVBAR ELEMENTS STYLING */
@@ -41,8 +43,13 @@ body{
 .container .navbar .links span{
     margin-left: 15px;
     padding: 5px 10px;
-    color: #60ccf0;
     font-size: 18px;
+}
+.active{
+    color: rgb(255, 44, 44);
+    margin-left: 15px;
+    padding: 5px 10px;
+    font-size: 19px;
 }
 
 .container .navbar .links .contact{
@@ -124,13 +131,21 @@ body{
     align-items: center;
     z-index: 100;
 }
-.container .bottom-slider .dot{
+.dot{
     margin: 0 10px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #0b1d25;
     opacity: .3;
+}
+.activeDot{
+    background-color: #ff0015;
+    margin: 0 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 1;
 }
 .container .bottom-slider .dot:hover{
     background-color: #60ccf0;
@@ -169,6 +184,7 @@ body{
     width: auto;
     height: 100%;
     position: relative;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 .container .page-container .page{
@@ -310,7 +326,7 @@ body{
     font-weight: 600;
     color: #ffffff;
     opacity: .7;
-    margin: 10px 10px 50px 10px;
+    margin: 10px 10px 30px 10px;
 }
 .container .page-container .projects .content .projects-container{
     display: grid;
@@ -435,29 +451,26 @@ body{
 .container .page-container .about .content .card{
     height: 60%;
     width: 20%;
-    margin: 5px;
+    margin: 15px;
     overflow: hidden;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.384);
+    background: rgba(0, 0, 0, 0.911);
     cursor: pointer;
     backdrop-filter: blur(10px);
+    border-radius: 4px;
 }
-.container .page-container .about .content .card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.container .page-container .about .content .card .button{
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+    background-color: #fff;
+    color: rgb(17, 17, 17);
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
     opacity: 0;
-    filter: blur(5px);
-    z-index: 1;
     transition: all ease-in-out .4s;
-}
-.container .page-container .about .content .card:hover{
-    cursor: pointer;
-}
-
-.container .page-container .about .content .card:hover img{
-    opacity: .1;
-    transition: .2s;
 }
 .container .page-container .about .content .card .title{
     position: absolute;
@@ -472,6 +485,25 @@ body{
     font-size: 30px;
     font-weight: 900;
     color: white;
+}
+.container .page-container .about .content .card:hover{
+    border-top: 4px solid #fff;
+}
+.container .page-container .about .content .card:hover .button{
+    opacity: 1;
+}
+.container .page-container .about .content .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    filter: blur(5px);
+    z-index: 1;
+    transition: all ease-in-out .4s;
+}
+.container .page-container .about .content .card:hover img{
+    opacity: .1;
+    transition: .2s;
 }
 .container .page-container .about .content .card:hover .title{
     top: 35px;
@@ -512,3 +544,130 @@ body{
     color: #ffffff;
     text-align: center;
 }
+.container .contact-me-page{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    right: -100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #0b1d25c5;
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: all ease-in-out .6s;
+}
+.container .contact-me-page .content{
+    margin-top: 50px;
+}
+.container .contact-me-page .content h1{
+    text-align: center;
+    font-family: 'Riffic Free Medium';
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    margin: 20px auto;
+}
+.container .contact-me-page .content .name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
+.container .contact-me-page .content .name input{
+    background: none;
+    border: 1px solid #215064;
+    border-left: 3px solid #fff;
+    border-radius: 3px;
+    height: 30px;
+    width: 100%;
+    font-family: 'consolas';
+    font-size: 18px;
+}
+.container .contact-me-page .content .email{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
+.container .contact-me-page .content .email input{
+    background: none;
+    border: 1px solid #215064;
+    border-left: 3px solid #fff;
+    border-radius: 3px;
+    height: 30px;
+    width: 100%;
+    font-family: 'consolas';
+    font-size: 18px;
+}
+.container .contact-me-page .content .text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
+.container .contact-me-page .content .text textarea{
+    background: none;
+    border: 1px solid #215064;
+    border-left: 3px solid #fff;
+    border-radius: 3px;
+    height: 200px;
+    width: 100%;
+    font-family: 'consolas';
+    font-size: 18px;
+}
+.container .contact-me-page .content .send{
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+    margin: 10px;
+}
+.container .contact-me-page .content .send input{
+    width: 100%;
+    text-align: center;
+    background-color: #2bff35;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: 800;
+}
+.container .contact-me-page .content .contact-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 10px auto;
+}
+.container .contact-me-page .content .contact-buttons a{
+    padding: 10px 20px;
+    font-family: 'raleway';
+    font-weight: 600;
+    font-size: 19px;
+    border-radius: 4px;
+    background-color: rgb(3, 3, 22);
+    cursor: pointer;
+}
+.container .contact-me-page .content .contact-buttons a:hover{
+    background-color: #e64747;
+}
+.container .contact-me-page .content .close{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-90%);
+    margin: 20px;
+    cursor: pointer;
+}
+.container .contact-me-page .content .close span{
+    font-weight: 800;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
