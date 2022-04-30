@@ -72,9 +72,10 @@ dotNavigation.forEach((g)=>{
 
 });
 next.addEventListener("click",()=>{
-    if(index<3){
+    if(index<2){
         index++;
     }
+    console.log(index);
     let location = parseInt(index)*pageOffset;
     page.scrollTo({
         top: 0,
@@ -82,6 +83,23 @@ next.addEventListener("click",()=>{
         behavior: "smooth"
 
     })
+    dotNavigation.forEach((r)=>{
+        let checkIndex;
+        checkIndex= r.dataset['index'];
+        r.classList.remove("activeDot")
+        r.classList.add("dot")
+        if(checkIndex == index){
+            r.setAttribute("class","activeDot");
+        }
+    });
+    navigation.forEach((r)=>{
+        let checkIndex;
+        checkIndex= r.dataset['position'];
+        r.classList.remove("active")
+        if(checkIndex == index){
+            r.setAttribute("class","active");
+        }
+    });
 })
 previous.addEventListener("click",()=>{
     if(index>0){
@@ -94,5 +112,22 @@ previous.addEventListener("click",()=>{
         behavior: "smooth"
 
     })
+    dotNavigation.forEach((r)=>{
+        let checkIndex;
+        checkIndex= r.dataset['index'];
+        r.classList.remove("activeDot")
+        r.classList.add("dot")
+        if(checkIndex == index){
+            r.setAttribute("class","activeDot");
+        }
+    });
+    navigation.forEach((r)=>{
+        let checkIndex;
+        checkIndex= r.dataset['position'];
+        r.classList.remove("active")
+        if(checkIndex == index){
+            r.setAttribute("class","active");
+        }
+    });
 })
 

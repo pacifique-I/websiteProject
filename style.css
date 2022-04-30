@@ -49,7 +49,8 @@ body{
     color: rgb(255, 44, 44);
     margin-left: 15px;
     padding: 5px 10px;
-    font-size: 19px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .container .navbar .links .contact{
@@ -470,7 +471,11 @@ body{
     right: 50%;
     transform: translateX(50%);
     opacity: 0;
+    cursor: pointer;
     transition: all ease-in-out .4s;
+}
+.container .page-container .about .content .card .button:hover{
+    cursor: pointer;
 }
 .container .page-container .about .content .card .title{
     position: absolute;
